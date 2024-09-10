@@ -80,6 +80,12 @@ main {
     h1 {
         font-size: 24px;
         font-weight: 800;
+        color: $grey-950;
+        transition: color 0.2s ease-in-out;
+        cursor: pointer;
+        &:hover {
+            color: $yellow;
+        }
     }
 
     p {
@@ -94,9 +100,10 @@ main {
     align-items: center;
 }
 
-.card__name {
+.author__name {
     text-transform: capitalize;
     font-size: 14px;
+    transition: color 0.2s ease-in-out;
 }
 
 aside {
@@ -135,5 +142,9 @@ aside {
 
     .card__author {
         font-size: 14px;
+    }
+
+    aside {
+        font-size: 10px;
     }
 }
