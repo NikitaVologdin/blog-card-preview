@@ -1,0 +1,139 @@
+@use "fonts";
+@import "variables";
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-family: "Figtree", sans-serif;
+    font-optical-sizing: auto;
+    background-color: $yellow;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    line-height: 150%;
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    max-width: $desktop;
+}
+
+.card {
+    padding: 24px;
+    background-color: $white;
+    border-radius: 20px;
+    max-width: 384px;
+    border: 1px solid $grey-950;
+    filter: drop-shadow(8px 8px $grey-950);
+
+    img {
+        border-radius: 10px;
+    }
+
+    article {
+        margin-top: 24px;
+    }
+}
+
+.card__header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.header__status {
+    width: 82px;
+    height: 29px;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-weight: 800;
+    color: $grey-950;
+    text-transform: capitalize;
+    background-color: $yellow;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header__published {
+    font-size: 14px;
+    font-weight: 500;
+    color: $grey-950;
+}
+
+.card__body {
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    h1 {
+        font-size: 24px;
+        font-weight: 800;
+    }
+
+    p {
+        color: $grey-500;
+    }
+}
+
+.card__author {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+    align-items: center;
+}
+
+.card__name {
+    text-transform: capitalize;
+    font-size: 14px;
+}
+
+aside {
+    text-align: center;
+    flex-shrink: 2;
+    padding-bottom: 10px;
+
+    .attribution {
+        font-size: 11px;
+        text-align: center;
+    }
+
+    .attribution a {
+        color: hsl(228, 45%, 44%);
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .container {
+        padding: 0 24px;
+    }
+
+    .card__header {
+        font-size: 12px;
+    }
+
+    .card__body {
+        h1 {
+            font-size: 20px;
+        }
+
+        p {
+            font-size: 14px;
+        }
+    }
+
+    .card__author {
+        font-size: 14px;
+    }
+}

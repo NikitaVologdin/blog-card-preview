@@ -1,0 +1,199 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+    margin: 0;
+}
+
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+/*
+  5. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/*
+  6. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/*
+  7. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/*
+  8. Create a root stacking context
+*/
+#root,
+#__next {
+    isolation: isolate;
+}
+@font-face {
+  font-family: "Figtree";
+  src: url("fonts/Figtree-Italic_wght.ttf") format("woff2");
+  src: url("fonts/Figtree_wght.ttf") format("ttf") tech("variations");
+  font-weight: 100 1000;
+  font-stretch: 25% 151%;
+}
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: "Figtree", sans-serif;
+  font-optical-sizing: auto;
+  background-color: hsl(47, 88%, 63%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  line-height: 150%;
+}
+
+main {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  max-width: 1440px;
+}
+
+.card {
+  padding: 24px;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 20px;
+  max-width: 384px;
+  border: 1px solid hsl(0, 0%, 7%);
+  filter: drop-shadow(8px 8px hsl(0, 0%, 7%));
+}
+.card img {
+  border-radius: 10px;
+}
+.card article {
+  margin-top: 24px;
+}
+
+.card__header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.header__status {
+  width: 82px;
+  height: 29px;
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-weight: 800;
+  color: hsl(0, 0%, 7%);
+  text-transform: capitalize;
+  background-color: hsl(47, 88%, 63%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header__published {
+  font-size: 14px;
+  font-weight: 500;
+  color: hsl(0, 0%, 7%);
+}
+
+.card__body {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.card__body h1 {
+  font-size: 24px;
+  font-weight: 800;
+}
+.card__body p {
+  color: hsl(0, 0%, 42%);
+}
+
+.card__author {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+  align-items: center;
+}
+
+.card__name {
+  text-transform: capitalize;
+  font-size: 14px;
+}
+
+aside {
+  text-align: center;
+  flex-shrink: 2;
+  padding-bottom: 10px;
+}
+aside .attribution {
+  font-size: 11px;
+  text-align: center;
+}
+aside .attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 640px) {
+  .container {
+    padding: 0 24px;
+  }
+  .card__header {
+    font-size: 12px;
+  }
+  .card__body h1 {
+    font-size: 20px;
+  }
+  .card__body p {
+    font-size: 14px;
+  }
+  .card__author {
+    font-size: 14px;
+  }
+}
